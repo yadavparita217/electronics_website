@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>ElectroStore</h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="cart.html">Cart 🛒</a></li>
+                <li><a href="wishlist.html">❤️ Wishlist</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- HOME SECTION -->
+
+    <section class="home" id="home">
+
+        <video autoplay muted loop class="bg-video" id="bgVideo">
+            <source src="home_bg_video.mp4" type="video/mp4">
+        </video>
+
+        <div class="home-text">
+            <h1><span>Welcome</span> to the World of Latest Electronics</h1>
+
+            <p>
+                Discover the best deals on Mobiles, Laptops, Headphones and
+                other smart gadgets for your daily needs.
+            </p>
+        </div>
+
+        <div class="home-img">
+            <img src="home_img.jpg" alt="electronics">
+        </div>
+
+    </section>
+
+
+
+    <!-- CATEGORY SECTION -->
+
+    <section class="categories" id="categories">
+
+        <h2 class="heading">Shop By Category</h2>
+
+        <div class="category-container">
+
+            <!-- MOBILE -->
+
+            <div class="category-box">
+                <img src="mobile.jpg">
+
+                <h3>Mobiles</h3>
+                <br><br>
+
+                <a href="mobile.html" class="cat-btn">
+                    View Mobiles
+                </a>
+
+            </div>
+
+
+            <!-- LAPTOP -->
+
+            <div class="category-box">
+                <img src="leptop.jpg">
+
+                <h3>Laptops</h3>
+                <br><br>
+
+                <a href="leptop.html" class="cat-btn">
+                    View Laptops
+                </a>
+
+            </div>
+
+
+            <!-- HEADPHONE -->
+
+            <div class="category-box">
+                <img src="headphone.jpg">
+
+                <h3>Headphones</h3>
+                <br><br>
+
+                <a href="headphone.html" class="cat-btn">
+                    View Headphones
+                </a>
+
+            </div>
+
+
+            <!-- SMART WATCH -->
+
+            <div class="category-box">
+                <img src="smart watch.jpg">
+
+                <h3>Smart Watch</h3>
+                <br><br>
+
+                <a href="smart watch.html" class="cat-btn">
+                    View Smart Watches
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURED PRODUCTS -->
+
+    <section class="products" id="products">
+
+        <h2 class="heading">Featured Products</h2>
+
+        <div class="product-container">
+
+            <div class="product-box">
+                <img src="iphone 14.jpg">
+
+                <h3>iPhone 14</h3>
+
+                <p class="price">₹70,000</p>
+
+                <button onclick="addToCart('iPhone 14',70000)" class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-box">
+
+                <img src="samsung.jpg">
+
+                <h3>Samsung Galaxy S23</h3>
+
+                <p class="price">₹65,000</p>
+
+                <button onclick="addToCart('Samsung Galaxy S23',65000)" class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-box">
+
+                <img src="dell_leptop.jpg">
+
+                <h3>Dell Laptop</h3>
+
+                <p class="price">₹55,000</p>
+
+                <button onclick="addToCart('Dell Laptop',55000)" class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-box">
+
+                <img src="boat_headphone.jpg">
+
+                <h3>Boat Headphones</h3>
+
+                <p class="price">₹2,500</p>
+
+                <button onclick="addToCart('Boat Headphones',2500)" class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LOGIN SECTION -->
+
+    <section class="login" id="login">
+
+        <h2 class="heading">Login</h2>
+
+        <div class="login-container">
+
+            <form>
+
+                <input type="text" placeholder="Enter Username" required>
+
+                <input type="password" placeholder="Enter Password" required>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="heading">Contact Us</h2>
+
+        <div class="contact-container">
+
+            <form>
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <textarea placeholder="Your Message"></textarea>
+
+                <button type="submit" class="contact-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>ElectroStore</h3>
+                <p>Your one stop shop for latest electronics and gadgets.</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#products">Products</a>
+                <a href="cart.html">Cart</a>
+
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+
+                <p>Email: electrostore@gmail.com</p>
+                <p>Phone: +91 9876543210</p>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 ElectroStore | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+
+    <script>
+
+        function addToCart(name, price) {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({ name: name, price: price });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(name + " added to cart");
+
+        }
+
+    </script>
+
+    <button onclick="topFunction()" id="topBtn">↑</button>
+
+
+</body>
+
+</html>

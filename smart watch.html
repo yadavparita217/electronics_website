@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Watches</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+        }
+
+        .watch-section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .watch-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .watch-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .watch-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .watch-box img {
+            width: 180px;
+            height: 150px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .cart-btn {
+            padding: 8px 15px;
+            background: orange;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-btn:hover {
+            background: red;
+        }
+
+        .wish-btn {
+            padding: 8px 15px;
+            background: #ff4081;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .wish-btn:hover {
+            background: #e91e63;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="watch-section">
+
+        <h2>Smart Watches</h2>
+
+        <div class="watch-container">
+
+            <div class="watch-box">
+                <img src="Apple Watch Series 9.jpg">
+                <h3>Apple Watch Series 9</h3>
+                <p class="price">₹42000</p>
+                <button onclick="addToCart('Apple Watch Series 9',42000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Apple Watch Series 9',42000,'Apple Watch Series 9.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Samsung Galaxy Watch 6.jpg">
+                <h3>Samsung Galaxy Watch 6</h3>
+                <p class="price">₹30000</p>
+                <button onclick="addToCart('Samsung Galaxy Watch 6',30000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Samsung Galaxy Watch 6',30000,'Samsung Galaxy Watch 6.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Boat Wave Call.jpg">
+                <h3>Boat Wave Call</h3>
+                <p class="price">₹2000</p>
+                <button onclick="addToCart('Boat Wave Call',2000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Boat Wave Call',2000,'Boat Wave Call.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Noise ColorFit Pro.jpg">
+                <h3>Noise ColorFit Pro</h3>
+                <p class="price">₹3500</p>
+                <button onclick="addToCart('Noise ColorFit Pro',3500)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Noise ColorFit Pro',3500,'Noise ColorFit Pro.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Fire-Boltt Ninja.jpg">
+                <h3>Fire-Boltt Ninja</h3>
+                <p class="price">₹1800</p>
+                <button onclick="addToCart('Fire-Boltt Ninja',1800)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Fire-Boltt Ninja',1800,'Fire-Boltt Ninja.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Realme Watch 3.jpg">
+                <h3>Realme Watch 3</h3>
+                <p class="price">₹4000</p>
+                <button onclick="addToCart('Realme Watch 3',4000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Realme Watch 3',4000,'Realme Watch 3.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Amazfit GTS 4.jpg">
+                <h3>Amazfit GTS 4</h3>
+                <p class="price">₹12000</p>
+                <button onclick="addToCart('Amazfit GTS 4',12000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Amazfit GTS 4',12000,'Amazfit GTS 4.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Garmin Venu Sq.jpg">
+                <h3>Garmin Venu Sq</h3>
+                <p class="price">₹20000</p>
+                <button onclick="addToCart('Garmin Venu Sq',20000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Garmin Venu Sq',20000,'Garmin Venu Sq.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Fossil Gen 6.jpg">
+                <h3>Fossil Gen 6</h3>
+                <p class="price">₹25000</p>
+                <button onclick="addToCart('Fossil Gen 6',25000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Fossil Gen 6',25000,'Fossil Gen 6.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="watch-box">
+                <img src="Titan Smart Pro.jpg">
+                <h3>Titan Smart Pro</h3>
+                <p class="price">₹9000</p>
+                <button onclick="addToCart('Titan Smart Pro',9000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Titan Smart Pro',9000,'Titan Smart Pro.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="electronics.html" class="cart-btn">⬅ Back to Home</a>
+
+    </section>
+
+    <script>
+
+        function addToCart(name, price) {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({ name: name, price: price });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(name + " added to cart");
+
+        }
+
+        function addToWishlist(name, price, image) {
+
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            wishlist.push({
+                name: name,
+                price: price,
+                image: image
+            });
+
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+            alert(name + " added to wishlist ❤️");
+
+        }
+
+    </script>
+</body>
+
+</html>

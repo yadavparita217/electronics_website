@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+        }
+
+        .mobile-section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .mobile-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .mobile-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .mobile-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .mobile-box img {
+            width: 180px;
+            height: 150px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .cart-btn {
+            padding: 8px 15px;
+            background: orange;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .cart-btn:hover {
+            background: red;
+        }
+
+        .wish-btn {
+            padding: 8px 15px;
+            background: #ff4081;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .wish-btn:hover {
+            background: #e91e63;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="mobile-section">
+
+        <h2>Mobiles</h2>
+
+        <div class="mobile-container">
+
+            <!-- 1 -->
+            <div class="mobile-box">
+                <img src="iphone 14.jpg">
+                <h3>iPhone 14</h3>
+                <p class="price">₹70000</p>
+                <button onclick="addToCart('iPhone 14',70000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('iPhone 14',70000,'iphone 14.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <!-- 2 -->
+            <div class="mobile-box">
+                <img src="samsung.jpg">
+                <h3>Samsung Galaxy S23</h3>
+                <p class="price">₹65000</p>
+                <button onclick="addToCart('Samsung Galaxy S23',65000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Samsung Galaxy S23',65000,'samsung.jfif')" class="wish-btn">❤
+                </button>
+            </div>
+
+            <!-- 3 -->
+            <div class="mobile-box">
+                <img src="mobile.jpg">
+                <h3>OnePlus 11</h3>
+                <p class="price">₹60000</p>
+                <button onclick="addToCart('OnePlus 11',60000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('OnePlus 11',60000,'mobile.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <!-- 4 -->
+            <div class="mobile-box">
+                <img src="realme narzo 60.jpg">
+                <h3>Realme Narzo 60</h3>
+                <p class="price">₹18000</p>
+                <button onclick="addToCart('Realme Narzo 60',18000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Realme Narzo 60',18000,'realme narzo 60.jfif')" class="wish-btn">❤
+                </button>
+            </div>
+
+            <!-- 5 -->
+            <div class="mobile-box">
+                <img src="vivo v29.jpg">
+                <h3>Vivo V29</h3>
+                <p class="price">₹32000</p>
+                <button onclick="addToCart('Vivo V29',32000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Vivo V29',32000,'vivo v29.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <!-- 6 -->
+            <div class="mobile-box">
+                <img src="Redmi Note 13.jpg">
+                <h3>Redmi Note 13</h3>
+                <p class="price">₹20000</p>
+                <button onclick="addToCart('Redmi Note 13',20000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Redmi Note 13',20000,'Redmi Note 13.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <!-- 7 -->
+            <div class="mobile-box">
+                <img src="realme 12x 5g.jpg">
+                <h3>Realme 12x 5G</h3>
+                <p class="price">₹18000</p>
+                <button onclick="addToCart('Realme 12x 5G',18000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Realme 12x 5G',18000,'realme 12x 5g.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <!-- 8 -->
+            <div class="mobile-box">
+                <img src="Oppo Reno 10.jpg">
+                <h3>Oppo Reno 10</h3>
+                <p class="price">₹30000</p>
+                <button onclick="addToCart('Oppo Reno 10',30000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Oppo Reno 10',30000,'oppo reno 10.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <!-- 9 -->
+            <div class="mobile-box">
+                <img src="iQOO Neo 7.jpg">
+                <h3>iQOO Neo 7</h3>
+                <p class="price">₹35000</p>
+                <button onclick="addToCart('iQOO Neo 7',35000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('iQOO Neo 7',35000,'iQOO Neo 7.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <!-- 10 -->
+            <div class="mobile-box">
+                <img src="Motorola Edge 40.jpg">
+                <h3>Motorola Edge 40</h3>
+                <p class="price">₹28000</p>
+                <button onclick="addToCart('Motorola Edge 40',28000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Motorola Edge 40',28000,'Motorola Edge 40.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <!-- 11 -->
+            <div class="mobile-box">
+                <img src="Nothing Phone 2.jpg">
+                <h3>Nothing Phone 2</h3>
+                <p class="price">₹40000</p>
+                <button onclick="addToCart('Nothing Phone 2',40000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Nothing Phone 2',40000,'Nothing Phone 2.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <!-- 12 -->
+            <div class="mobile-box">
+                <img src="Asus ROG Phone.jpg">
+                <h3>Asus ROG Phone</h3>
+                <p class="price">₹55000</p>
+                <button onclick="addToCart('Asus ROG Phone',55000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Asus ROG Phone',55000,'Asus ROG phone.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="electronics.html" class="cart-btn">⬅ Back to Home</a>
+
+    </section>
+
+    <script>
+
+        function addToCart(name, price) {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({ name: name, price: price });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(name + " added to cart");
+
+        }
+
+        function addToWishlist(name, price, image) {
+
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            wishlist.push({
+                name: name,
+                price: price,
+                image: image
+            });
+
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+            alert(name + " added to wishlist ❤️");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

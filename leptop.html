@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+        }
+
+        .laptop-section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .laptop-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .laptop-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .laptop-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .laptop-box img {
+            width: 180px;
+            height: 150px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .cart-btn {
+            padding: 8px 15px;
+            background: orange;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-btn:hover {
+            background: red;
+        }
+
+        .wish-btn {
+            padding: 8px 15px;
+            background: #ff4081;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .wish-btn:hover {
+            background: #e91e63;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="laptop-section">
+
+        <h2>Laptops</h2>
+
+        <div class="laptop-container">
+
+            <div class="laptop-box">
+                <img src="dell_leptop.jpg">
+                <h3>Dell Inspiron</h3>
+                <p class="price">₹55000</p>
+                <button onclick="addToCart('Dell Inspiron',55000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Dell Inspiron',55000,'Dell Inspiron.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="HP Pavilion.jpg">
+                <h3>HP Pavilion</h3>
+                <p class="price">₹60000</p>
+                <button onclick="addToCart('HP Pavilion',60000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('HP Pavilion',25000,'sony WH-1000XM4.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Lenovo IdeaPad.jpg">
+                <h3>Lenovo IdeaPad</h3>
+                <p class="price">₹50000</p>
+                <button onclick="addToCart('Lenovo IdeaPad',50000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Lenovo IdeaPad',50000,'Lenovo IdeaPad.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Apple MacBook Air.jpg">
+                <h3>Apple MacBook Air</h3>
+                <p class="price">₹95000</p>
+                <button onclick="addToCart('Apple MacBook Air',95000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Apple MacBook Air',95000,'Apple MacBook Air.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Asus VivoBook.jpg">
+                <h3>Asus VivoBook</h3>
+                <p class="price">₹58000</p>
+                <button onclick="addToCart('Asus VivoBook',58000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Asus VivoBook',58000,'Asus VivoBook.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Acer Aspire.jpg">
+                <h3>Acer Aspire</h3>
+                <p class="price">₹48000</p>
+                <button onclick="addToCart('Acer Aspire',48000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Acer Aspire',48000,'Acer Aspire.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="MSI Gaming Laptop.jpg">
+                <h3>MSI Gaming Laptop</h3>
+                <p class="price">₹88000</p>
+                <button onclick="addToCart('MSI Gaming Laptop',88000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('MSI Gaming Laptop',88000,'MSI Gaming Laptop.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Asus ROG Strix.jpg">
+                <h3>Asus ROG Strix</h3>
+                <p class="price">₹120000</p>
+                <button onclick="addToCart('Asus ROG Strix',120000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Asus ROG Strix',120000,'Asus ROG Strix.jfif')"
+                    class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="HP Omen.jpg">
+                <h3>HP Omen</h3>
+                <p class="price">₹110000</p>
+                <button onclick="addToCart('HP Omen',110000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('HP Omen',110000,'HP Omen.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Lenovo Legion.jpg">
+                <h3>Lenovo Legion</h3>
+                <p class="price">₹105000</p>
+                <button onclick="addToCart('Lenovo Legion',105000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Lenovo Legion',105000,'Lenovo Legion.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Dell XPS 13.jpg">
+                <h3>Dell XPS 13</h3>
+                <p class="price">₹125000</p>
+                <button onclick="addToCart('Dell XPS 13',125000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Dell XPS 13',125000,'Dell XPS 13.jfif')" class="wish-btn">❤</button>
+            </div>
+
+            <div class="laptop-box">
+                <img src="Acer Predator.jpg">
+                <h3>Acer Predator</h3>
+                <p class="price">₹115000</p>
+                <button onclick="addToCart('Acer Predator',115000)" class="cart-btn">Add to Cart</button>
+                <button onclick="addToWishlist('Acer Predator',115000,'Acer Predator.jfif')" class="wish-btn">❤</button>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="electronics.html" class="cart-btn">⬅ Back to Home</a>
+
+    </section>
+
+    <script>
+
+        function addToCart(name, price) {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({ name: name, price: price });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(name + " added to cart");
+
+        }
+
+        function addToWishlist(name, price, image) {
+
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            wishlist.push({
+                name: name,
+                price: price,
+                image: image
+            });
+
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+            alert(name + " added to wishlist ❤️");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

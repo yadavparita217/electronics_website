@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart</title>
+
+    <style>
+        /* CART PAGE */
+
+        .cart-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 35px;
+        }
+
+        .cart-container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-table th {
+            background: orange;
+            color: white;
+            padding: 12px;
+        }
+
+        .cart-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            font-size: 25px;
+            color: green;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .shop-btn:hover {
+            background: red;
+        }
+
+        /* REMOVE BUTTON */
+
+        .remove-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .remove-btn:hover {
+            background: darkred;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2 class="cart-title">Your Cart</h2>
+
+    <div class="cart-container">
+
+        <table class="cart-table">
+
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+
+            <tbody id="cartItems">
+            </tbody>
+
+        </table>
+
+        <h3 class="cart-total">
+            Total Amount: ₹<span id="totalAmount">0</span>
+        </h3>
+
+        <a href="electronics.html" class="shop-btn">
+            ⬅ Continue Shopping
+        </a>
+
+    </div>
+
+
+    <script>
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let table = document.getElementById("cartItems");
+
+        let total = 0;
+
+        cart.forEach(function (item, index) {
+
+            let row = document.createElement("tr");
+
+            let itemTotal = item.price;
+
+            total += itemTotal;
+
+            row.innerHTML = `
+<td>${item.name}</td>
+<td>₹${item.price}</td>
+<td>1</td>
+<td>₹${itemTotal}</td>
+<td>
+<button class="remove-btn" onclick="removeItem(${index})">
+Remove
+</button>
+</td>
+`;
+
+            table.appendChild(row);
+
+        });
+
+        document.getElementById("totalAmount").innerText = total;
+
+
+        /* REMOVE ITEM FUNCTION */
+
+        function removeItem(index) {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.splice(index, 1);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            location.reload();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

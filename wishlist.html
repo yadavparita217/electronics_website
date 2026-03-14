@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wishlist</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        .wishlist-container {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .box img {
+            width: 150px;
+            height: 130px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .remove-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .home-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>❤️ My Wishlist</h2>
+
+    <div class="wishlist-container" id="wishlistItems"></div>
+
+    <a href="electronics.html" class="home-btn">⬅ Back to Home</a>
+
+    <script>
+
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+        let container = document.getElementById("wishlistItems");
+
+        wishlist.forEach(function (item, index) {
+
+            let box = document.createElement("div");
+
+            box.classList.add("box");
+
+            box.innerHTML = `
+<img src="${item.image}">
+<h3>${item.name}</h3>
+<p class="price">₹${item.price}</p>
+<button class="remove-btn" onclick="removeItem(${index})">
+Remove
+</button>
+`;
+
+            container.appendChild(box);
+
+        });
+
+        function removeItem(index) {
+
+            wishlist.splice(index, 1);
+
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+            location.reload();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
